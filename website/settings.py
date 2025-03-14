@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -80,6 +82,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
+# URL untuk file statis
+STATIC_URL = '/static/'
+
+# Folder tempat Django mencari file statis dalam mode pengembangan
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# Folder tujuan untuk menyimpan file statis saat menggunakan `collectstatic`
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
