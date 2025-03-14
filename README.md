@@ -11,7 +11,7 @@ Ini adalah website yang telah saya buat.
 1. **Salin Projek**:
 ```
 git clone https://github.com/Firaasya/2311102441232_Fitrilia-Rahmadhini_DJANGO.git
-
+```
 2. **Buat Virtual environmet**
 ```
 python -m venv .venv
