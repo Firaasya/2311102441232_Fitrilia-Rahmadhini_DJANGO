@@ -1,22 +1,35 @@
-# Tentang Saya
+# Website Project Django
 
-Halo dengan saya Fitrilia Rahmadhinni disini, berikut adalah salah satu hasil dari tugas yang saya kerjakan.
+Ini adalah website yang telah saya buat.
 
+## My Fav:
+- 🔹 Cats
+- 🔹 Chocolate
+- 🔹 Ice Cream
 
-## Apa yang akan kamu lihat disini?
-
-- kehidupan saya yang aman dan tentram.
-
-## Cara menjalankan repository
-
-1. Clone project
-
-```commandline
-git clone https://github.com/Firaasya/2311102441232_FITRILIA_RAHMADHINI_DJANGO
+## Cara Menjalankan
+1. **Salin Projek**:
 ```
+git clone https://github.com/Firaasya/2311102441232_Fitrilia-Rahmadhini_DJANGO.git
 
-2. Jalankan project
+2. **Buat Virtual environmet**
+```
+python -m venv .venv
+```
+ 
+ Atau dalam kasus tertentu menggunakkan :
+ ```
+ python3 -m venv .venv
+ ```
+3. **Activate .venv**
+```
+# For Windows
+.venv\Scripts\activate
 
-```commandline
-python manage.py runserver
+# macOS/Linux
+source .venv/bin/activate
+```
+4. **Install dependency**
+```
+pip install django
 ```
