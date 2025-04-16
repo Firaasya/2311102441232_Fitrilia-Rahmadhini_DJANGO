@@ -2,11 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Guet
 
 def home(request):
-    return render(request, 'guetbook/home.html')
+    return render(request, 'halaman/base.html')
 
 def guetbook_list(request):
     guets = Guet.objects.all().order_by('-date')
-    return render(request, 'guetbook/guetbook_list.html', {'guets': guets})
+    return render(request, 'halaman/base.html', {'guets': guets})
 
 def add_guet(request):
     if request.method == "POST":
