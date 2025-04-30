@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Tambah Tamu</title>
+  </head>
+  <body>
+    <h1>Tambah Tamu</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Nama" required /><br />
+      <input type="email" name="email" placeholder="Email" required /><br />
+      <textarea name="message" placeholder="Pesan" required></textarea><br />
+      <button type="submit">Kirim</button>
+    </form>
+    <a href="{% url 'guestbook_list' %}">Kembali</a>
+  </body>
+</html>
