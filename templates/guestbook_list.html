@@ -6,10 +6,10 @@
     <h1>Buku Tamu</h1>
     <a href="{% url 'add_guest' %}">Tambah Tamu</a>
     <ul>
-      {% for guet in guets %}
+      {% for guest in guets %}
       <li>
         <strong>{{ guest.name }}</strong> ({{ guest.email }})<br />
-        {{ guet.message }}<br />
+        {{ guest.message }}<br />
         <small>{{ guest.date }}</small>
       </li>
       {% endfor %}
