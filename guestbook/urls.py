@@ -8,5 +8,5 @@ urlpatterns = [
     
     path('', guestbook_list, name='guestbook_list'),
     path('guestbook/', guestbook_view, name='guestbook'), 
-    path('add-guests/', add_guest, name='add_guest'),
+    path('add/guests/', add_guest, name='add_guest'),
 ]

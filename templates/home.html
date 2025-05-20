@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +18,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/guestbook">Guestbook</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/add-guest">Add Guest</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/add_guest">Add Guest</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +28,7 @@
             <h1>Selamat datang di Guestbook</h1>
             <p class="lead">You are like my morning coffee — you power me through the day. Have a nice day!</p>
             <a href="/guestbook" class="btn btn-primary">View</a>
-            <a href="/add-guests" class="btn btn-success">Sign</a>
+            <a href="{% url 'add_guest' %}" class="btn btn-success">Sign</a>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

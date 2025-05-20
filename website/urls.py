@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.home, name='home'),  
     path('guestbook/', include('guestbook.urls')),
     path('admin/', admin.site.urls),
+    
 ]
