@@ -1,18 +1,36 @@
-<html>
-  <head>
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buku Tamu</title>
-  </head>
-  <body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
     <h1>Buku Tamu</h1>
-    <a href="{% url 'add_guest' %}">Tambah Tamu</a>
-    <ul>
-      {% for guest in guets %}
-      <li>
-        <strong>{{ guest.name }}</strong> ({{ guest.email }})<br />
-        {{ guest.message }}<br />
-        <small>{{ guest.date }}</small>
-      </li>
-      {% endfor %}
-    </ul>
-  </body>
+    <a href="{% url 'add_guest' %}"><button>Tambah Tamu</button></a>
+    <a href="{% url 'home' %}"><button type="button">Back Home</button></a>
+
+</body>
 </html>

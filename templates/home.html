@@ -1,36 +1,74 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guestbook Home</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Guestbook</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/guestbook">Guestbook</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/add_guest">Add Guest</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-        <div class="container mt-5 text-center">
-            <h1>Selamat datang di Guestbook</h1>
-            <p class="lead">You are like my morning coffee — you power me through the day. Have a nice day!</p>
-            <a href="/guestbook" class="btn btn-primary">View</a>
-            <a href="{% url 'add_guest' %}" class="btn btn-success">Sign</a>
-        </div>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Guestbook</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .center-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero-icon {
+      font-size: 4rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+    .btn-group-custom {
+      margin-top: 1.5rem;
+    }
+    .btn-group-custom .btn {
+      margin: 0 0.5rem;
+    }
+    footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">Guestbook</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'guestbook_list' %}">Guestbook</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'add_guest' %}">Add Guest</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="center-container">
+    <div class="hero-icon">📖</div>
+    <h1 class="display-5 fw-bold">Selamat datang di Guestbook</h1>
+    <p class="lead">You are like my morning coffee — you power me through the day. Have a nice day!</p>
+    <div class="btn-group-custom">
+      <a href="{% url 'guestbook_list' %}" class="btn btn-primary">View</a>
+      <a href="{% url 'add_guest' %}" class="btn btn-success">Sign</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Guestbook. Made with ❤️ by Fitrilia
+  </footer>
+
+</body>
 </html>

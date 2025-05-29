@@ -1,16 +1,66 @@
-<html>
-  <head>
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Tamu</title>
-  </head>
-  <body>
-    <h1>Tambah Tamu</h1>
-    <form method="POST">
-      {% csrf_token %}
-      <input type="text" name="name" placeholder="Nama" required /><br />
-      <input type="email" name="email" placeholder="Email" required /><br />
-      <textarea name="message" placeholder="Pesan" required></textarea><br />
-      <button type="submit">Kirim</button>
-    </form>
-    <a href="{% url 'guestbook_list' %}">Kembali</a>
-  </body>
+    <style>
+        body {
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Menghentikan di tengah horizontal */
+            align-items: center; /* Menghentikan di tengah vertical */
+            height: 100vh; /* Mengatur tinggi seluruh viewport */
+            margin: 0; /* Menghapus margin default */
+            background-color: #f0f0f0; /* Warna latar belakang (opsional) */
+        }
+        .form-container {
+            background-color: white; /* Warna latar belakang form */
+            padding: 20px; /* Ruang dalam form */
+            border-radius: 8px; /* Membuat sudut membulat */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+        }
+        h1 {
+            text-align: center; /* Menyelaraskan judul di tengah */
+        }
+        input, textarea {
+            width: 100%; /* Lebar penuh */
+            margin: 10px 0; /* Ruang antara elemen */
+            padding: 10px; /* Ruang dalam input */
+            border: 1px solid #ccc; /* Batas input */
+            border-radius: 4px; /* Sudut membulat */
+        }
+        button {
+            width: 100%; /* Lebar penuh */
+            padding: 10px; /* Ruang dalam tombol */
+            border: none; /* Menghapus batas */
+            border-radius: 4px; /* Sudut membulat */
+            background-color: #5cb85c; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            cursor: pointer; /* Kursor saat hover */
+        }
+        button:hover {
+            background-color: #4cae4c; /* Ubah warna tombol saat hover */
+        }
+        .link {
+            display: block; /* Membuat link menjadi blok untuk lebar penuh */
+            text-align: center; /* Menyelaraskan link di tengah */
+            margin-top: 10px; /* Ruang atas */
+            color: #007bff; /* Warna link */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Tambah Tamu</h1>
+        <input type="text" placeholder="Nama" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="4" placeholder="Pesan" required></textarea>
+        <button type="submit">Kirim</button>
+        <a href="{% url 'home' %}">
+        <button type="button">Kembali</button>
+        </a>
+
+    </div>
+</body>
 </html>
